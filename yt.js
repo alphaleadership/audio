@@ -1,10 +1,7 @@
-module.export=(url,filename)=>{
-    const fs = require('fs');
+const fs = require('fs');
 const ytdl = require('ytdl-core');
-// TypeScript: import ytdl from 'ytdl-core'; with --esModuleInterop
-// TypeScript: import * as ytdl from 'ytdl-core'; with --allowSyntheticDefaultImports
-// TypeScript: import ytdl = require('ytdl-core'); with neither of the above
-
-ytdl(url)
-  .pipe(fs.createWriteStream(`./video/${filename}.mp4`));
+var scan =(url2,filename)=>{
+    ytdl(url2)
+    .pipe(fs.createWriteStream(`./video/${filename}.mp4`));console.log(`${filename} a bien été traité `)
 }
+module.exports = scan

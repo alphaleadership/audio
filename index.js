@@ -1,4 +1,6 @@
 const yt = require("./yt")
+const fs = require("fs")
+
 fs.readdir("./data", (err, files) => {
     if (err)
       console.log(err);
@@ -10,3 +12,4 @@ fs.readdir("./data", (err, files) => {
       })
     }
   })
+  process.exit()
